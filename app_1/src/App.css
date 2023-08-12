@@ -1,0 +1,113 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #9ad5f0, #5c3f6b); /* Blue to purple */
+  position: sticky; /* Stick the navigation bar to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navigation bar is on top of other elements */
+  box-sizing: border-box; /* Include padding and borders in the total width */
+}
+
+.menu-icon {
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 30px; /* Set the desired width */
+  height: 30px; /* Set the desired height */
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list li a:hover {
+  background-color: white;
+    color: #555;
+}
+
+.animated-button {
+  display: inline-block;
+  padding: 15px 30px; /* Increase padding for a larger button */
+  border: none;
+  background-color: #aaf28c;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px; /* Rounded edges */
+  transition: transform 0.3s; /* Transition for slide animation */
+}
+
+.animated-button:hover {
+  background-color: #ff5a5a; /* Change to red on hover */ /* Apply the color slide animation */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Color slide animation keyframes */
+@keyframes colorSlideAnimation {
+  0% {
+    background-color: #aaf28c;
+    transform: translateX(0);
+  }
+  100% {
+    background-color: #ff5a5a;
+    transform: translateX(-10px);
+  }
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block; /* Display the menu icon on mobile */
+  }
+
+  .nav-list {
+    display: none; /* Hide the nav list by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust top value to align with the navigation bar */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+      text-align: left;
+  }
+    
+    
+  .nav-container.mobile-open .nav-list {
+    display: flex; /* Display the nav list when mobile menu is open */
+      background: linear-gradient(to right, #9ad5f0, #5c3f6b);
+      
+  }
+    .nav-container {
+        padding: 1rem;
+    }
+}
