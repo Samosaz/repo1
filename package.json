@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "homepage": ".",
-=======
-  "homepage": "http://Samosaz.github.io/pracrepo",
->>>>>>> bdb8beee5d5974f991e08675ed4e267221678408
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
